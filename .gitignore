@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.py[cod]
+streamvenv/
+
+# Django
+*.log
+local_settings.py
+db.sqlite3
+
+# Next.js
+.next/
+out/
+node_modules/
+.DS_Store
+
+# Environment variables
+.env
+.env.local
