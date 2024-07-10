@@ -1,0 +1,39 @@
+<header>
+    <Navbar expand="lg" className="bg-body-tertiary">
+      <Container>
+        <Navbar.Brand href="#home">LocalStreamz</Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="me-auto">
+            <Nav.Link href="#home">Home</Nav.Link>
+            <Nav.Link href="#movies">Movies</Nav.Link>
+            <Nav.Link href="#series">Series</Nav.Link>
+            <NavDropdown title="Genres" id="basic-nav-dropdown">
+        <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.2">Comedy</NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.3">Crime</NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.3">Drama</NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.3">Horror</NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.3">Romanace</NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.3">Thriller</NavDropdown.Item>
+        </NavDropdown>
+        <Form inline>
+        <Row className="justify-content-end">
+          <Col xs="auto">
+            <Form.Control
+              type="text"
+              placeholder="Search"
+              className=" mr-sm-2"
+            />
+          </Col>
+          <Col xs="auto">
+            <Button type="submit">Search</Button>
+          </Col>
+        </Row>
+      </Form>
+    
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
+    </header>
