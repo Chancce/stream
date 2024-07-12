@@ -1,7 +1,7 @@
 # Python
 __pycache__/
 *.py[cod]
-streamvenv/
+backendenv/
 
 # Django
 *.log

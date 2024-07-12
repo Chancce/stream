@@ -1,19 +1,27 @@
 import React from 'react'
-//import second from 'first'
+import {Link} from 'react-router-dom'
 import { Card } from 'react-bootstrap'
 
 function Content({content}) {
+  const formatTitle = (name) => {
+    return name ? name.replace(/ /g, '_') : '';
+  }
+
+
+
+
   return (
     <Card className="my-3 rounded" >
-    <a href={`/${content.name}`}>
+    <Link to={`/${content.uid}/${formatTitle(content.name)}`}>
+    
     <Card.Img src={content.poster} />
 
-    </a>
+    </Link>
     <Card.Body>
-    <a href={`/${content.name}`}>
+    <Link to={`/${content.uid}/${formatTitle(content.name)}`}>
     <Card.Title as="div" />
     <strong>{content.name}</strong>
-    </a>
+    </Link>
     <Card.Text>IMDB Rating: {content.rating}</Card.Text>
     </Card.Body>
     </Card>

@@ -1,6 +1,6 @@
-const movies = [
+movies_shows = [
     {
-        "id": 1,
+        "uid": 1,
         "name": "The Great Escape",
         "poster": "/images/The_Great_Escape.jpg",
         "description": "An epic tale of courage and resilience, following the journey of unlikely heroes who rise against all odds to save their homeland.",
@@ -10,7 +10,7 @@ const movies = [
         "media": "/media/The_Great_Escape.mp4"
     },
     {
-        "id": 2,
+        "uid": 2,
         "name": "A Journey Through Time",
         "poster": "/images/A_Journey_Through_Time.jpg",
         "description": "A captivating exploration of love, loss, and redemption set against the backdrop of historical events that shaped the world.",
@@ -20,7 +20,7 @@ const movies = [
         "media": "/media/A_Journey_Through_Time.mp4"
     },
     {
-        "id": 3,
+        "uid": 3,
         "name": "Love and War",
         "poster": "/images/Love_and_War.jpg",
         "description": "A thrilling narrative that delves into the mysteries of the universe, challenging the boundaries of science and imagination.",
@@ -30,7 +30,7 @@ const movies = [
         "media": "/media/Love_and_War.mp4"
     },
     {
-        "id": 4,
+        "uid": 4,
         "name": "The Dark Side",
         "poster": "/images/The_Dark_Side.jpg",
         "description": "A heartwarming story about the power of friendship and the enduring spirit of hope in the face of life's greatest challenges.",
@@ -40,7 +40,7 @@ const movies = [
         "media": "/media/The_Dark_Side.mp4"
     },
     {
-        "id": 5,
+        "uid": 5,
         "name": "Laughter in the Rain",
         "poster": "/images/Laughter_in_the_Rain.jpg",
         "description": "A hilarious and poignant look at the chaos that ensues when worlds collide, blending humor with deep emotional moments.",
@@ -50,7 +50,7 @@ const movies = [
         "media": "/media/Laughter_in_the_Rain.mp4"
     },
     {
-        "id": 6,
+        "uid": 6,
         "name": "Mystery of the Unknown",
         "poster": "/images/Mystery_of_the_Unknown.jpg",
         "description": "An intense psychological thriller that keeps you on the edge of your seat, unraveling secrets that were meant to stay hidden.",
@@ -60,7 +60,7 @@ const movies = [
         "media": "/media/Mystery_of_the_Unknown.mp4"
     },
     {
-        "id": 7,
+        "uid": 7,
         "name": "Adventures Beyond",
         "poster": "/images/Adventures_Beyond.jpg",
         "description": "A mesmerizing adventure that takes you to fantastical realms, where every twist and turn brings new wonders and dangers.",
@@ -70,7 +70,7 @@ const movies = [
         "media": "/media/Adventures_Beyond.mp4"
     },
     {
-        "id": 8,
+        "uid": 8,
         "name": "Heartstrings",
         "poster": "/images/Heartstrings.jpg",
         "description": "A touching drama that explores the intricate dynamics of family and the bonds that hold us together, even in the toughest times.",
@@ -80,7 +80,7 @@ const movies = [
         "media": "/media/Heartstrings.mp4"
     },
     {
-        "id": 9,
+        "uid": 9,
         "name": "Parallel Worlds",
         "poster": "/images/Parallel_Worlds.jpg",
         "description": "An imaginative journey through parallel dimensions, where reality is constantly shifting and nothing is as it seems.",
@@ -90,7 +90,7 @@ const movies = [
         "media": "/media/Parallel_Worlds.mp4"
     },
     {
-        "id": 10,
+        "uid": 10,
         "name": "Haunted Memories",
         "poster": "/images/Haunted_Memories.jpg",
         "description": "A spine-chilling horror story that haunts your dreams, revealing the dark past that refuses to stay buried.",
@@ -100,7 +100,7 @@ const movies = [
         "media": "/media/Haunted_Memories.mp4"
     },
     {
-        "id": 11,
+        "uid": 11,
         "name": "The Last Stand",
         "poster": "/images/The_Last_Stand.jpg",
         "description": "A high-stakes action saga that pits heroes against formidable foes, testing their limits in the ultimate battle for survival.",
@@ -110,7 +110,7 @@ const movies = [
         "media": "/media/The_Last_Stand.mp4"
     },
     {
-        "id": 12,
+        "uid": 12,
         "name": "Echoes of the Past",
         "poster": "/images/Echoes_of_the_Past.jpg",
         "description": "A reflective and haunting narrative that delves into the echoes of the past, uncovering truths long forgotten.",
@@ -120,7 +120,7 @@ const movies = [
         "media": "/media/Echoes_of_the_Past.mp4"
     },
     {
-        "id": 13,
+        "uid": 13,
         "name": "Comedy of Errors",
         "poster": "/images/Comedy_of_Errors.jpg",
         "description": "A delightful comedy filled with unexpected twists, showcasing the absurdity and joy found in everyday life.",
@@ -130,7 +130,7 @@ const movies = [
         "media": "/media/Comedy_of_Errors.mp4"
     },
     {
-        "id": 14,
+        "uid": 14,
         "name": "Secrets in the Shadows",
         "poster": "/images/Secrets_in_the_Shadows.jpg",
         "description": "A suspenseful mystery that delves into the hidden corners of the human psyche, where secrets lurk in the shadows.",
@@ -140,7 +140,7 @@ const movies = [
         "media": "/media/Secrets_in_the_Shadows.mp4"
     },
     {
-        "id": 15,
+        "uid": 15,
         "name": "Galaxy Quest",
         "poster": "/images/Galaxy_Quest.jpg",
         "description": "A thrilling sci-fi adventure that spans galaxies, exploring the unknown and challenging the very fabric of reality.",
@@ -150,7 +150,7 @@ const movies = [
         "media": "/media/Galaxy_Quest.mp4"
     },
     {
-        "id": 16,
+        "uid": 16,
         "name": "Tears of Joy",
         "poster": "/images/Tears_of_Joy.jpg",
         "description": "A deeply moving romance that captures the essence of true love, with all its trials and triumphs.",
@@ -160,7 +160,7 @@ const movies = [
         "media": "/media/Tears_of_Joy.mp4"
     },
     {
-        "id": 17,
+        "uid": 17,
         "name": "Whispers of the Wind",
         "poster": "/images/Whispers_of_the_Wind.jpg",
         "description": "A poetic and serene journey that captures the whispers of the wind, carrying tales of love and longing.",
@@ -170,7 +170,7 @@ const movies = [
         "media": "/media/Whispers_of_the_Wind.mp4"
     },
     {
-        "id": 18,
+        "uid": 18,
         "name": "Beneath the Surface",
         "poster": "/images/Beneath_the_Surface.jpg",
         "description": "An intense drama that reveals the layers beneath the surface, exposing raw emotions and untold stories.",
@@ -180,7 +180,7 @@ const movies = [
         "media": "/media/Beneath_the_Surface.mp4"
     },
     {
-        "id": 19,
+        "uid": 19,
         "name": "Warriors of Light",
         "poster": "/images/Warriors_of_Light.jpg",
         "description": "An epic fantasy that follows the valiant warriors of light as they battle the forces of darkness to save their world.",
@@ -190,7 +190,7 @@ const movies = [
         "media": "/media/Warriors_of_Light.mp4"
     },
     {
-        "id": 20,
+        "uid": 20,
         "name": "Silent Night",
         "poster": "/images/Silent_Night.jpg",
         "description": "A serene and contemplative tale that embraces the quiet beauty of a silent night, where every moment holds deep meaning.",
@@ -200,4 +200,3 @@ const movies = [
         "media": "/media/Silent_Night.mp4"
     }
 ]
-export default movies

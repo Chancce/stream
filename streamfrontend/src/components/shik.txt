@@ -1,29 +1,40 @@
+import React from 'react'
+import {Container,Nav,Navbar,NavDropdown,Form, Row,Col,Button} from 'react-bootstrap'
+import {LinkContainer} from 'react-router-bootstrap'
+
+function Header() {
+  return (
+    
 <header>
-    <Navbar expand="lg" className="bg-body-tertiary">
+    <Navbar expand="lg" bg="dark" className="bg-body-tertiary justify-content-between" >
       <Container>
-        <Navbar.Brand href="#home">LocalStreamz</Navbar.Brand>
+        <LinkContainer to='/'>
+        <Navbar.Brand >LocalStreamz</Navbar.Brand>
+        </LinkContainer>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#movies">Movies</Nav.Link>
-            <Nav.Link href="#series">Series</Nav.Link>
-            <NavDropdown title="Genres" id="basic-nav-dropdown">
-        <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">Comedy</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Crime</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Drama</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Horror</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Romanace</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Thriller</NavDropdown.Item>
+            <LinkContainer to="/"> <Nav.Link>   Home</Nav.Link> </LinkContainer>
+            <LinkContainer to="/movies"> <Nav.Link>  Movies</Nav.Link> </LinkContainer>
+            <LinkContainer to="/series"> <Nav.Link>   TV Shows</Nav.Link> </LinkContainer>
+
+        <NavDropdown title="Genres" id="basic-nav-dropdown">
+            <LinkContainer to="/action"><NavDropdown.Item> Action</NavDropdown.Item>
+            <LinkContainer to="/comedy"> <NavDropdown.Item>Comedy</NavDropdown.Item>
+            <LinkContainer to="/crime"> <NavDropdown.Item >Crime</NavDropdown.Item>
+            <LinkContainer to="/drama"> <NavDropdown.Item >Drama</NavDropdown.Item>
+            <LinkContainer to="/horror"> <NavDropdown.Item >Horror</NavDropdown.Item>
+            <LinkContainer to="/romance"> <NavDropdown.Item> Romanace</NavDropdown.Item>
+            <LinkContainer to="/thriller"> <NavDropdown.Item >Thriller</NavDropdown.Item>
         </NavDropdown>
-        <Form inline>
-        <Row className="justify-content-end">
+    
+      <Form inline>
+        <Row>
           <Col xs="auto">
             <Form.Control
               type="text"
               placeholder="Search"
-              className=" mr-sm-2"
+              className=" mr-sm-6"
             />
           </Col>
           <Col xs="auto">
@@ -31,9 +42,14 @@
           </Col>
         </Row>
       </Form>
-    
           </Nav>
         </Navbar.Collapse>
       </Container>
     </Navbar>
-    </header>
+  </header>
+
+
+  )
+}
+
+export default Header
