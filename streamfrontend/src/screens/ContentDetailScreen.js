@@ -6,8 +6,8 @@ import  VideoPlayer  from '../components/VideoPlayer'
 import '../videoPlayer.css'
 
 function ContentDetailScreen() {
-  const { id } = useParams();
-  const content = movies_shows.find((c) => String(c.id) === id);
+  const { id } = useParams()
+  const all_shows = movies_shows.find((c) => String(c.id) === id)
 
   function getRandomVideoLength() {
     const hours = Math.floor(Math.random() * 2); // 0 to 1 hours
@@ -21,21 +21,21 @@ function ContentDetailScreen() {
       <Link to="/" className="btn btn-light back-button">Back Home</Link>
       <Row>
         <Col md={3}>
-          <Image src={content.poster} fluid />
+          <Image src={all_shows.poster} fluid />
         </Col>
         <Col md={9}>
           <ListGroup>
             <ListGroup.Item className="list-group-item">
-              <strong>{content.name}</strong>
+              <strong>{all_shows.name}</strong>
             </ListGroup.Item>
             <ListGroup.Item className="list-group-item">
-              {content.description}
+              {all_shows.description}
             </ListGroup.Item>
             <ListGroup.Item className="list-group-item">
-              IMDB Rating: {content.rating}
+              IMDB Rating: {all_shows.rating}
             </ListGroup.Item>
             <ListGroup.Item className="list-group-item">
-              Genre: {content.genre}
+              Genre: {all_shows.genre}
             </ListGroup.Item>
             <ListGroup.Item className="list-group-item">
               Length: {getRandomVideoLength()}
@@ -45,7 +45,7 @@ function ContentDetailScreen() {
       </Row>
       <Row className="video-section">
         <Col>
-          <VideoPlayer videoSrc={content.media} title={content.name} />
+          <VideoPlayer videoSrc={all_shows.media} title={all_shows.name} />
         </Col>
       </Row>
     </div>

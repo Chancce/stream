@@ -4,12 +4,12 @@ import { Row, Col } from 'react-bootstrap'
 import  Content  from '../components/Content'
 
 function HomeScreen() {
-  const [movies_shows,setMoviesShows] = useState([])
+  const [all_shows,setAllShows] = useState([])
 
   useEffect(()=>{
     async function fetchMoviesShows(){
-      const {data}= await axios.get('/api/contents/')
-      setMoviesShows( data)
+      const {data}= await axios.get('/api/shows/')
+      setAllShows( data)
     }
 
   fetchMoviesShows()
@@ -21,10 +21,10 @@ function HomeScreen() {
     <div>
         Popular Movies
         <Row>
-            {movies_shows.map (content =>(
-                <Col key= {content.id} sm={12} md={6} lg={4} xl={3} >
+            {all_shows.map (shows =>(
+                <Col key= {shows.uuid} sm={12} md={6} lg={4} xl={3} >
                 
-                    <Content content={content} />
+                    <Content shows={shows} />
 
                 </Col>
             ))}

@@ -3,6 +3,7 @@ __pycache__/
 *.py[cod]
 backendenv/
 
+
 # Django
 *.log
 local_settings.py
